@@ -50,7 +50,7 @@ after this i also styles a bit where i implemented a dark theme background for t
 * i started to draw the lay-out i wanted on a piece of paper. Yes!!! I know, I know,... That's not THE way. But it's my way.
 _______________________
 
-[picture one](./src/assets/layout1.jpg)
-[picture two](./src/assets/layout2.jpg)
+![picture one](./src/assets/layout1.jpg "layout1")
+![picture two](./src/assets/layout2.jpg "layout2")
 let's try to make this...
 
