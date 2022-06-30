@@ -1,0 +1,11 @@
+.menuBtn{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    position: fixed;
+    margin-left:1em;
+    margin-top:1em;
+    background-color: darkorchid;
+    color: white;
+    border-color: darkorchid;
+}
