@@ -10,3 +10,6 @@ this automatically deploys the page on github pages. BUT!! when i opened it it c
 
 **now i can start working on the app...**
 [Link to the site]( https://martekode.github.io/)
+
+____________________________
+added **@angular/material** and deleted the starter page already provided by angular/core. it now just gives the title and my name to begin with.
