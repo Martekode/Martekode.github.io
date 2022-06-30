@@ -47,3 +47,10 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 ```
 after this i also styles a bit where i implemented a dark theme background for the body #212121  and accent colors darkorchid.
+* i started to draw the lay-out i wanted on a piece of paper. Yes!!! I know, I know,... That's not THE way. But it's my way.
+_______________________
+
+[picture one](./src/assets/layout1.jpg)
+[picture two](./src/assets/layout2.jpg)
+let's try to make this...
+
