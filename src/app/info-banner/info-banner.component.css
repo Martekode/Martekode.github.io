@@ -1,0 +1,17 @@
+.tableContainer{
+    text-align: center;
+    display: inline;
+    color: white;
+}
+.container{
+    text-align: center;
+}
+.mat-card{
+    background-color: darkorchid!important;
+}
+.redProgress .mat-progress-bar-fill::after{
+    background-color: red !important;
+}
+th{
+    color:red;
+}

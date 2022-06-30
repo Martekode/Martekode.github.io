@@ -53,4 +53,80 @@ _______________________
 ![picture one](./src/assets/layout1.jpg "layout1")
 ![picture two](./src/assets/layout2.jpg "layout2")
 let's try to make this...
+so i started with the banner, i went to material and went to the examples of the card components. i found a card with a title, subtitle, some text, a devider, buttons and a progress bar that's animated. i took this one sinds it had to most appeal to me. 
+adding it gave me some errors. it said that it didn't know devider and progress bar.. at the time i didn't know why. But now i know. Sinds i only imported the card module, it obvously didn't know the devider and p-bar because i didn't import them. it's pretty easy when the ide tells you it doesn't know it. search for an import.
 
+```html
+<mat-card class="example-card">
+  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  <mat-card-title>Shiba Inu</mat-card-title>
+  <mat-card-content>
+    <p>This card has divider and indeterminate progress as footer</p>
+    <p>{{ longText }}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
+´´´
+this is how it started...
+i changed it though, to this.:
+```html
+<mat-card class="example-card bg-dark">
+    <mat-card-subtitle>Info Brian Desmedt</mat-card-subtitle>
+    <mat-card-title>Personal Info</mat-card-title>
+    <mat-card-content>
+    <p>{{ longText }}</p>
+    <div class="container">
+    <table class="tableContainer">
+       <tr>
+            <th>name:</th>
+            <th>phone number:</th>
+            <th>hobbies:</th>
+            <th>email:</th>
+          </tr>
+          <tbody>
+            <td>{{realName}}</td>
+            <td>{{realPhone}}</td>
+            <td>{{realHobbies[0]+", "+realHobbies[1]+", "+realHobbies[2]+", "+ realHobbies[3]+"."}}</td>
+            <td>{{realEmail}}</td>
+          </tbody>
+    </table>
+</div>
+
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button>facebook</button>
+      <button mat-button>github</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar class="redProgress" mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+```
+notice the variables in the table. It is amazing that u can change the content in the ts file and refer to it in the view.
+i didn't imediatly found a way to use foreach here to print this. i could make a function in the ts and then call it in the vieuw.
+
+i wanted to change the css of progress bar but that seemed difficult but i found it:
+* first i started writing the css: 
+```css
+.redProgress .mat-progress-bar-fill::after{
+    background-color: red !important;
+}
+```
+u can talk to the mat-progress-bar directly but when u only this it will not work. sinds it works with a theme ftom material itself, it is not as easy to overwrite. but u can disable the theme with encapsulation..
+```ts
+@Component({
+  selector: 'app-info-banner',
+  templateUrl: './info-banner.component.html',
+  styleUrls: ['./info-banner.component.css'],
+  encapsulation: ViewEncapsulation.None,
+})
+```
+and now it works.. i have a red progress bar. 

@@ -1,8 +1,25 @@
-<mat-card class="example-card">
+<mat-card class="example-card bg-dark">
     <mat-card-subtitle>Info Brian Desmedt</mat-card-subtitle>
     <mat-card-title>Personal Info</mat-card-title>
     <mat-card-content>
-      <p>{{ longText }}</p>
+    <p>{{ longText }}</p>
+    <div class="container">
+    <table class="tableContainer">
+       <tr>
+            <th>name:</th>
+            <th>phone number:</th>
+            <th>hobbies:</th>
+            <th>email:</th>
+          </tr>
+          <tbody>
+            <td>{{realName}}</td>
+            <td>{{realPhone}}</td>
+            <td>{{realHobbies[0]+", "+realHobbies[1]+", "+realHobbies[2]+", "+ realHobbies[3]+"."}}</td>
+            <td>{{realEmail}}</td>
+          </tbody>
+    </table>
+</div>
+
     </mat-card-content>
     <mat-divider inset></mat-divider>
     <mat-card-actions>
@@ -10,6 +27,6 @@
       <button mat-button>github</button>
     </mat-card-actions>
     <mat-card-footer>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar class="redProgress" mode="indeterminate"></mat-progress-bar>
     </mat-card-footer>
   </mat-card>
